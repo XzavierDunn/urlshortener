@@ -7,7 +7,7 @@ btn.addEventListener("click", (e) => {
   toggle();
 
   url = url.value.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split("/")[0];
-  fetch(`http://127.0.0.1:5000?url=${url}`)
+  fetch(`https://xdurl.herokuapp.com?url=${url}`)
     .then((res) => res.json())
     .then((data) => {
       if (data != "Something is wrong with your URL") {
