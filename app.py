@@ -9,6 +9,7 @@ from flask import Flask, redirect, render_template, request, make_response, json
 app = Flask(__name__)
 CORS(app)
 
+
 @app.route('/', methods=['GET'])
 def create():
     if request.args.get('url'):
@@ -25,7 +26,7 @@ def create():
             with open('data/urls.csv', 'a') as file:
                 csvwriter = csv.writer(file)
                 csvwriter.writerow([url, short])
-            return jsonify('https://xdurl.herokuapp.com/' + short)
+            return jsonify('https://xd-url.com/' + short)
 
     else:
         return render_template('index.html')

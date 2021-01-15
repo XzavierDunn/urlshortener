@@ -8,7 +8,7 @@ btn.addEventListener("click", (e) => {
   resClose();
 
   exact = url.value.replace(/(^\w+:|^)\/\//, "");
-  fetch(`https://xdurl.herokuapp.com?url=${exact}`)
+  fetch(`https://xd-url.com?url=${exact}`)
     .then((res) => res.json())
     .then((data) => {
       if (data != "Something is wrong with your URL") {
