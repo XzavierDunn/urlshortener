@@ -5,9 +5,10 @@ let copy = document.getElementById("copy");
 btn.addEventListener("click", (e) => {
   e.preventDefault();
   toggle();
+  resClose();
 
-  url = url.value.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split("/")[0];
-  fetch(`https://xdurl.herokuapp.com?url=${url}`)
+  exact = url.value.replace(/(^\w+:|^)\/\//, "");
+  fetch(`https://xdurl.herokuapp.com?url=${exact}`)
     .then((res) => res.json())
     .then((data) => {
       if (data != "Something is wrong with your URL") {
@@ -17,6 +18,7 @@ btn.addEventListener("click", (e) => {
         location.reload();
       }
       toggle();
+      url.value = "";
     });
 });
 
@@ -59,4 +61,11 @@ let toggleRes = () => {
     urlBox.style.display = "none";
     copy.style.display = "none";
   }
+};
+
+let resClose = () => {
+  let urlBox = document.getElementById("urlBox");
+  let copy = document.getElementById("copy");
+  urlBox.style.display = "none";
+  copy.style.display = "none";
 };
