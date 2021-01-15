@@ -3,6 +3,10 @@ body {
   background-image: url("/static/image/cream-pixels.png");
 }
 
+#big {
+  margin-top: 20vh;
+}
+
 #title {
   width: 75%;
   margin: auto;

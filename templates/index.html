@@ -23,35 +23,40 @@
     />
   </head>
   <body>
-    <!-- MID -->
-    <div id="title">
-      <h1>Welcome to XD's URL shortener</h1>
-      <h3>Go ahead ... shorten a URL. You won't.</h3>
-    </div>
+    <div id="big">
+      <div id="title">
+        <h1>Welcome to XD's URL shortener</h1>
+        <h3>Go ahead ... shorten a URL. You won't.</h3>
+      </div>
 
-    <div id="main">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Enter your URL</label
-          >
-          <input class="form-control" id="url" placeholder="www.site.com " />
+      <div id="main">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Enter your URL</label
+            >
+            <input class="form-control" id="url" placeholder="www.site.com " />
+          </div>
+          <button id="btn" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <div id="resBox">
+        <input style="display: none" type="text" id="urlBox" />
+        <button
+          class="btn btn-warning"
+          style="display: none"
+          id="copy"
+        ></button>
+
+        <div
+          style="width: 6rem; height: 6rem; display: none"
+          class="spinner-border text-light"
+          role="status"
+          id="spinner"
+        >
+          <span class="visually-hidden">Loading...</span>
         </div>
-        <button id="btn" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-
-    <div id="resBox">
-      <input style="display: none" type="text" id="urlBox" />
-      <button class="btn btn-warning" style="display: none" id="copy"></button>
-
-      <div
-        style="width: 6rem; height: 6rem; display: none"
-        class="spinner-border text-light"
-        role="status"
-        id="spinner"
-      >
-        <span class="visually-hidden">Loading...</span>
       </div>
     </div>
 
