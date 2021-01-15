@@ -3,10 +3,11 @@ import requests
 import random
 import string
 
+from flask_cors import CORS
 from flask import Flask, redirect, render_template, request, make_response, jsonify
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/', methods=['GET'])
 def create():
