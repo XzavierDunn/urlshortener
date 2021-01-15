@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XD URL</title>
+
+    <link rel="icon" href="./static/favicon/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- MID -->
+    <div id="title">
+      <h1>Welcome to XD's URL shortener</h1>
+      <h3>Go ahead ... shorten a URL. You won't.</h3>
+    </div>
+
+    <div id="main">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Enter your URL</label
+          >
+          <input class="form-control" id="url" placeholder="www.site.com " />
+        </div>
+        <button id="btn" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <div id="resBox">
+      <input style="display: none" type="text" id="urlBox" />
+      <button class="btn btn-warning" style="display: none" id="copy"></button>
+
+      <div
+        style="width: 6rem; height: 6rem; display: none"
+        class="spinner-border text-light"
+        role="status"
+        id="spinner"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
