@@ -2,12 +2,6 @@ let btn = document.getElementById("btn");
 let url = document.getElementById("url");
 let copy = document.getElementById("copy");
 
-if (location.protocol !== "https:") {
-  location.replace(
-    `https:${location.href.substring(location.protocol.length)}`
-  );
-}
-
 btn.addEventListener("click", (e) => {
   e.preventDefault();
   toggle();
